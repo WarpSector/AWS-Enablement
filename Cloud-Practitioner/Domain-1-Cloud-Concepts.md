@@ -91,6 +91,18 @@ Cloud computing is the on-demand delivery of IT resources over the internet with
    * Security
    * Sustainability
 
+```mermaid
+%%{init: {'theme': 'neutral'}}%%
+mindmap
+  root((6 Pillars))
+    Operational Excellence
+    Security
+    Reliability
+    Performance Efficiency
+    Cost Optimization
+    Sustainability
+```
+
 ## The AWS Cloud Adoption Framework (CAF)
 
 1. **Business Perspective**
@@ -120,3 +132,14 @@ Cloud computing is the on-demand delivery of IT resources over the internet with
    * Performance
    * Incident Response
 
+```mermaid
+%%{init: {'theme': 'neutral'}}%%
+mindmap
+  root ((CAF))
+    Business
+    People
+    Governance
+    Platform
+    Security
+    Operations
+```
