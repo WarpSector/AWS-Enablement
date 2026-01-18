@@ -60,4 +60,63 @@ Cloud computing is the on-demand delivery of IT resources over the internet with
 3. **On-Premises (On-Prem)**
    * Resources completely out of the Cloud and on-premises hardware.
 
+## The Six (6) Pillars of the AWS Well-Architected Framework (Design Framework)
+
+1. **Operational Excellence**
+   * Running and Monitoring Systems
+   * Constant Improvement
+
+2. **Security**
+   * Protecting Information, Data, and Assets
+
+3. **Reliability**
+   * Recover from Failures
+   * Meet Demand
+
+4. **Performance Efficiency**
+   * Speed
+   * Effective Use of Resources as Demand Fluctuates
+
+5. **Cost Optimization**
+   * Avoid Unnecessary Costs
+  
+6. **Sustainability**
+   * Minimize Environmental Impact (newest pillar)
+  
+**Remember: C.O.R.S.S.S.**
+   * Cost Optimization
+   * Operational Excellence
+   * Reliability
+   * Speed (Performance Efficiency)
+   * Security
+   * Sustainability
+
+## The AWS Cloud Adoption Framework (CAF)
+
+1. **Business Perspective**
+   * ROI
+   * Business Value
+   * C-Level Stakeholders
+  
+2. **People Perspective**
+   * Training
+   * Organizational Change
+   * Human Resources
+
+3. **Governance Perspective**
+   * Risk Management
+   * Compliance
+
+4. **Platform Perspective**
+   * Architecture and Data Structures
+   * Moving from Legacy to Modern
+
+5. **Security Perspective**
+   * Access Control (IAM)
+   * Data Protection (Encryption)
+  
+6. **Operations Perspective**
+   * Day-to-Day Cloud Management
+   * Performance
+   * Incident Response
 
