@@ -28,12 +28,11 @@ Cloud computing is the on-demand delivery of IT resources over the internet with
 6. **Go Global in Minutes:**
    * Easily deploy your application in multiple regions around the world in minutes and with the lowest latency possible.
   
-## The Types of Services Available on AWS
+## Cloud Computing Models
 
 **Infrastructure as a Service (IaaS)**
-   * This is the basic building block of the Cloud.
    * This gives you the most control where you control the virtual server (EC2), storage (S3), databases (RDS), and the OS.
-   * AWS manages the hardware and infrastructure of the Cloud, you manage everything else (the OS, the software, the patches) in the Cloud.
+   * AWS manages the hardware and infrastructure of the Cloud, you manage everything else (the OS, the software/apps, the patches) in the Cloud.
    * AWS Examples: Amazon EC2 Instances, Amazon VPC
    * User Profile: For the Cloud Engineer who wants total control.
 
@@ -47,4 +46,18 @@ Cloud computing is the on-demand delivery of IT resources over the internet with
    * You only use the web-based apps.
    * AWS manages the hardware and infrastructure of the Cloud, the OS and patches, **as well as** the apps.
    * AWS Examples: AWS Marketplace apps
-   * User Profile: For the Business User who only wants to use the apps.   
+   * User Profile: For the Business User who only wants to use the apps.
+
+## Types of Cloud Deployment
+
+1. **Public Cloud**
+   * Full deployment in the Cloud.
+   * All apps and services run in the Cloud having been either deployed in the Cloud directly or migrated from on-prem infrastructure.
+
+2. **Hybrid**
+   * Connecting on-prem infrastructure resources (off the Cloud) to resources in the Cloud.
+     
+3. **On-Premises (On-Prem)**
+   * Resources completely out of the Cloud and on-premises hardware.
+
+
