@@ -57,4 +57,6 @@
      2. **EFS Infrequent Access (IA):** useful if you don't need to access the files regularly and is a more cost-effective option than the EFS Standard.
      3. **EFS Archive:** used for archival purposes and an even cheaper option than EFS IA.
    * EFS can be replicated across Regions for disaster recovery (DR) purposes.
-     * **Note:** You can create a mount point in the Region the EFS is replicated, however, that 2nd mount point will only allow **read-only** access to the EFS. 
+     * **Note:** You can create a mount point in the Region the EFS is replicated (re: 2nd Region), however, that 2nd mount point will only allow **read-only** access to the EFS (the only time it won't be read-only is if your access fails over to the 2nd Region).
+   * EFS can also be connect to an on-prem data center (from outside the Cloud) via Amazon Direct Connect or a VPN connect using the Linux NFS protocol.
+   * **Automatic Back Up:** EFS used AWS Backup for automatic file system backups. 
