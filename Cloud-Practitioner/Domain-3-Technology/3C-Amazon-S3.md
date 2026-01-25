@@ -53,7 +53,8 @@
      * Regional EFS are durable, meaning the files are copied across the AZs they are mounted to.
      * **File Locking:** NFS protocol allows read/write locking to ensure data consistency.    
    * **Storage Classes:**
-     * 1. **EFS Standard:** uses SSD for low-latency performance.
-     * 2. **EFS Infrequent Access (IA):** useful if you don't need to access the files regularly and is a more cost-effective option than the EFS Standard.
-     * 3. **EFS Archive:** used for archival purposes and an even cheaper option than EFS IA.
- 
+     1. **EFS Standard:** uses SSD for low-latency performance.
+     2. **EFS Infrequent Access (IA):** useful if you don't need to access the files regularly and is a more cost-effective option than the EFS Standard.
+     3. **EFS Archive:** used for archival purposes and an even cheaper option than EFS IA.
+   * EFS can be replicated across Regions for disaster recovery (DR) purposes.
+     * **Note:** You can create a mount point in the Region the EFS is replicated, however, that 2nd mount point will only allow **read-only** access to the EFS. 
