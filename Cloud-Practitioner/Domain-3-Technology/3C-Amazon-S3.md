@@ -23,4 +23,13 @@
       * **Recall:** Rest APIs are a set of rules for how computers should "talk" to each other over the internet using HTTP protocol. 
     * This type of storage is scalable and very cost-effective.
    
-  
+### Amazon Elastic Block Store (EBS) and Instance Stores
+* #### Amazon Elastic Block Store (EBS)
+   * This is the block-based storage system on AWS.
+   * EBS exists as volumes within Availability Zones (AZs) and can be mounted to EC2 instances.
+   * The EBS volume is automatically replicated within the AZ.
+   * The EBS volume **will not delete** any data/files if the EC2 instance connected to it is terminated.
+* #### Instance Stores
+   * Instance Store volumes are physically attached to the EC2 instance host server (re: the block storage hardware in the physcial host server the EC2 instance is running on).
+   * Instance Store volumes are included with the EC2 instance and are good for high throughput and high performance.
+   * Instance Store volumes are **EPHEMERAL** - if the EC2 instance is terminated or the power is lost to the host server, the Instance Store will be wiped.  
