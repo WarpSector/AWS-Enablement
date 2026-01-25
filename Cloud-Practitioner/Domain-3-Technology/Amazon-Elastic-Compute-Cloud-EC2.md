@@ -1,1 +1,94 @@
+## Amazon Elastic Compute Cloud (EC2)
 
+**EC2 Overview and Basics**
+   * **Compute is the engine of the Cloud.** This is where all the compute processing (CPU) of your Cloud applications and web services happen.
+   * Amazon Elastic Compute Cloud (EC2) is an AWS service that lets you easily use compute resources in the Cloud.
+   * You run virtual instances/machines in the Cloud when you use Amazon EC2.
+   * Amazon EC2 instances can run Linux, Windows, or MacOS.
+   * The instances are **elastic** allowing you to provision additional servers when needed and terminate unused or underutilized servers when you no longer need them.
+      * **NOTE:** Scaling is NOT automatic by default. You will need to set the rules in the AWS Management Console and configure the Auto-Scaling Groups (ASGs) to scale your EC2 instances when necessary.
+      * The ASGs will scale **horizontally** since this is not disruptive.
+      * Vertical scaling is available to perform manually, but it's disruptive (requires you to stop/start the instance) and defeats the purpose of the Cloud's elasticity (horizontal scaling and distributing the workload). 
+   * You can select different instance types with varying combinations of CPU, memory, storage, networking, and OS:
+      * Family/Generation: Examples: Main/General Purpose (M), Compute Intensive (C), Graphics Intensive (G), Data (D), RAM (R), Cheap (T), Fast (F), High Memory (U), High Compute + Memory (Z), High Disk Throughput (H), etc.  
+      * Volume/Size: Nano, Micro, Small, Medium, Large, X-Large, 2X-Large - just remember the next size is double the previous size.
+   * You pay only for what you use.
+   * AWS manages the physical underlying infrastructure (host) and the virtualization layer (hypervisor), while the users manage their VMs and resources in the Cloud.
+   * EC2 is IaaS: AWS manages the underlying hardware and you manage everything else from the OS (platform) and up.
+   * EC2 instances "sit" inside the public or private subnet within the AZ, which "sits" within the (regional) VPC.
+
+**Virtualization**
+   * EC2 works via virtualization technology.
+   * The physical server uses virtualization software, which creates a **hypervisor** over the physical server (enabled by using virtualization software such as Zen, Microsoft V, KVM, etc.).
+   * The hypervisor creates a layer of "abstracton" between the physical server and the virtual server by allocating resources from the physical hardware into the virtual machine (VM) including the memory, storage, networking, and CPU power.
+   * Virtual Machines are also referred to as virtual servers or virtual instances.
+   * Virtualization allows you to run multiple VMs on the same physical server.
+   * Virtualization allows portability allowing you to move the VM to different physical servers (it resolves the limitation of having the OS tied to a specific piece of hardware).
+   * Virtualization allows scaling - allowing you to spread your VMs across multiple physical servers.
+
+**EC2 Benefits**
+   * Elastic: increase/decrease capacity to meet demand fluctuations and web traffic spikes.
+   * Reliable: highly reliable environment where replacement instances can be provisioned rapidly with **Regional** service-level agreements (SLAs) of 99.99% **if architected for High Availability** (i.e., EC2 instances are spread across multiple AZs and have an elastic load balancer along with an ASG to distribute and handle the load while the first failed EC2 instance is repaired and brought back online (this is also known as "self-healing" architecture: High Availability (HA) + Fault Tolerance (FT)).
+   * Inexpensive: Amazon passes on the benefit of economies of scale to the users.
+   * Integrated: EC2 instances are integrated with a wide variety of AWS services (including S3, RDS, and VPC) so you can build complete services within the Cloud.
+   * Secure: EC2 works inconjunction with the VPC to provide a secure location with an IP address range you can configure to allow access to your EC2 (in combination with network security measures like Network Access Control Lists (Network ACLs) protecting your subnet boundaries, Web Application Firewalls (WAFs) protecting your application load balancers (ALBs), and Security Groups protecting the EC2 instances themselves).
+
+**Amazon Machine Image (AMI)**
+   * When you launch an EC2 instance, you must select an Amazon Machine Image (AMI) that specifies the type of OS you want to run, the resources you want to allocate to the VM, and the data and applications you want in the VM.
+   * Think of AMIs as the "blueprint" for the EC2 instance you are launching. If the EC2 instance is the "house", then the AMI is the "furniture".
+   * There are 3 types of AMIs:
+       * Community AMIs: AMIs that are created by other AWS users, which you can access from the community and download for free.
+       * AWS AMIs: AMIs built by Amazon and available for purchase since they come packaged with additional licensed software.
+       * Custom AMIs: AMIs you've built yourself. Best practice for Custom AMIs is to build them and install all the software, data, applications, and configurations you want before you create the snapshot. This way, if you need to load it into a different EC2 instance, you have the entire VM snapshotted and can easily upload it in one fell swoop (versus having to manually install the software and apps and manually configuring the instance each time you want to boot up a new one).
+   * **NOTE:** AMIs are "region locked" meaning they only exist in the Region they are created. You must copy them to other Regions if you want to launch a specific AMI in a different Region.
+
+**EC2 Pricing**
+   * There are different pricing models available:
+       * On-Demand Instances:
+         * Good for users that need flexibility without any upfront payment or long-term committment (true "pay-as-you-go" pricing model).
+         * Good for users with unpredictable and spiky web traffic or unpredictable workloads that need to be processed with zero interruption.
+         * Good for users developing and testing applications on EC2 for the first time.            
+       * Reserved Instances (RIs):
+         * Good for users that have steady-state or predictable workloads.
+         * Good for users that need reserved capacity for their apps and workloads.
+         * Standard Reserve Instances (RIs) provide up to 75% off the On-Demand price. 
+         * Users can make upfront payments to reduce their computing costs even further.
+         * RIs can be scheduled and launched within a time window you reserve, which allows you to match your reserved capacity to a predictable recurring schedule.
+      * Spot Instances:
+         * Good for users who have flexible start and end times, because Spot Instances can be interrupted if other users demand additional capacity.
+         * Good for users who have an urgent need for a large amount of additional compute capacity.
+         * If Amazon interrupts or terminates your instance, you don't pay. If you terminate, you pay for the hour.
+      * Dedicated Hosts:
+         * These are dedicated **physical** servers reserved only for you.
+         * The user has control over which instances to deploy on the host, though the user can only deploy one instance size and type on the host.
+         * This allows complete isolation. No one else will use the underlying server you are hosting your instances on so you can create all the VMs you want.
+         * Good for users with regulatory compliance and/or licensing requirements.
+         * This is the most expensive option.
+      * Dedicated Instances:
+         * This can be Dedicated Hosts with Dedicated Instances already spun up for you.
+         * This can also be Dedicated Instances just for you, but not on Dedicated Hosts (you just have the instances, but the host can be shared with other users). 
+         * Billing is per instance.
+      * Savings Plans:
+         * Flexible pricing model that saves up to 72% on your AWS compute usage.
+         * Offers lower pricing on EC2 instance usage regardless of family, OS, size, or type.
+         * Savings also apply to AWS Lambda and AWS Fargate.          
+
+**EC2 Metadata and User Data**
+   * User data is a form of **bootstrapping** - you provide a script that the instance automatically executes when it first boots up without you having to manually perform whatever function the script is supposed to execute after the instance boots up (think of it as a "To Do" list for the server to carry out the first few seconds it "wakes up").
+   * Metadata is data about the EC2 instance that can be used to configure and manage the running instance (available at http://169.254.169.254/latest/meta-data
+   * **NOTE:** Metadata and User Data are NOT encrypted.
+
+**AWS Family of Compute Services**
+   * While EC2 is the "grandfather" of Amazon's compute cloud services, other compute services are available:
+      * AWS Batch:
+        * Enables developers, scientists, and engineers to easily and efficiently run hundreds of thousands of batch computing jobs on AWS.
+        * AWS Batch dynamically provisions the optimal quantity and type of compute resources for the job being processed.
+        * With AWS Batch, you package the code to run the jobs, specify any dependencies, and then submit the batch job via the AWS Management Console, AWS Command Line Interface (CLI), or an AWS Software Development Kit (SDK).
+      * Amazon Lightsail:
+        * Best for users who do not have technical expertise with AWS as this service makes it very easy for them to provision compute services.
+        * Amazon Lightsail provides compute, storage, and networking capacity and capability to deploy and manage websites, webservices, and databases in the Cloud.
+        * Amazon Lightsail includes a VM, SSD-based storage, data transfer, DNS management, and a static IP.
+        * Lets you deploy load balancers and attach block storage.
+        * Best suited for projects that require a few dozen instances or less: good for blogs, websites, web apps, e-commerce, etc.
+        * Not as powerful as EC2 instances.
+        * Has a simple management interface.
