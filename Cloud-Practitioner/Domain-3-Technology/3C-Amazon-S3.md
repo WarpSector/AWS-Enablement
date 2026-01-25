@@ -21,7 +21,7 @@
     * Objects can be managed by developers and services can be integreated via **REpresentational State Transfer (REST)** API so the files can be managed via code.
       * **Recall:** Rest APIs are a set of rules for how computers should "talk" to each other over the internet using HTTP protocol. 
     * This type of storage is scalable and very cost-effective.
-* #### Differences between File-Storage and Object-Storage
+* #### Differences between File-Based Storage and Object-Based Storage
     * File-based storage is accessed via local and networked HDDs/SSDs vs. Object-based storage which is accessed over the internet.
     * File-based storage uses data directories and a file hierarchy (re: the "tree with many branches" analogy) vs. Object-based storage does not use any directories nor has a hierarchy (re: "sand in a bucket" analogy).
     * File-based storage is always accessible since local hard drive and network hard drives are mounted and always available vs. Object-based storage once the RestAPI call is made, the connection is closed. 
