@@ -161,7 +161,7 @@
         * A fee is charged for retrieval.
      * **Additional Features of AWS Glacier:**
         * **S3 Object Lock:** Objects can be "write-once read-many" (WORM) configured, which prevents the object from being overwritten or deleted for a fixed amount of time or permenantly.
-        * **S3 Glacier Vault Lock:** Applies the WORM model as a policy to the entire archive (via a JSON document) and has a 24-hour "locking" period to reverse it (if not reversed, the WORM policy applies indefinitely for the specific amount of time that not even the root user can change).  
+        * **S3 Glacier Vault Lock:** Applies the WORM model as a policy to the entire archive (via a JSON document) and has a 24-hour "locking" period to reverse it (if not reversed, the WORM policy applies indefinitely for the specified amount of time set in the policy (JSON) that not even the root user can change).  
 
 ### Amazon FSx
    * **Amazon FSx offers fully managed third-party file systems for either Windows File Server (for Windows-based apps) or Lustre (for high performance computing (HPC) workloads).**
@@ -173,8 +173,20 @@
      * Lustre works natively with Amazon S3 - presents S3 objects as files. (Remember: FSx and S3 are **Lustre**!).
      * On Prem Data Centers can access vis VPN or AWS Direct Connect (common use case: cloud bursting).
     
-
-
+### AWS Storage Gateway
+   * **This service is used to connect on-prem infrastructure and applications to Cloud storage (aka: hybrid cloud storage service).**
+   * #### Use Cases:
+     *  Moving backups to the Cloud
+     *  Using on-prem files shares backed by Cloud storage
+     *  Low latency access to AWS services from on-prem applications
+     *  Disaster recovery
+   * #### Types of Gateways:
+     * **File Gateway:** gateway from on-prem to Cloud file-based storage systems.
+     * **Volume Gateway:** gateway from on-prem to Cloud block-based storage systems.
+     * **Backup Gateway:** gateway from on-prem to Cloud file-based or block-based protocols via popular backup software as if it were a "tape" (but really, it's pulling objects from S3 in the Cloud).
+    
+ 
+        
 
 
 
