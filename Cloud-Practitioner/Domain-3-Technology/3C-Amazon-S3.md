@@ -102,6 +102,14 @@
      * You can access S3 privately (meaning not through the public internet) by connecting to S3 via an **S3 Gateway Endpoint**, which connects your VPC directly to S3 via the AWS Internal Backbone (so your traffic never touches the public internet backbone).
       * **NOTE:** To access S3 privately from an on-prem data center, you would connect to S3 via an **AWS Storage Gateway** using **AWS Direct Connect**.
       * On Prem DC --> AWS Storage Gateway --> AWS Direct Connect (Public or Private Virtual Interface (VIF)) --> Amazon S3
+   * #### S3 Versioning
+     * **Versioning** is keeping multiple variants of the same object in a bucket (re: if you upload a newer version of the same object, both the newer version and the old version will be available in the bucket).
+     * Versioning can preserve, retrieve, and restore every version of an object stored in a bucket.
+     * Enabling versioning in your bucket can recover your object in case of accidental deletion or overwrite.      
+   * #### S3 Replication
+     * **Cross-Regional Replication (CRR):** Buckets are replicated across different Regions.
+     * **Same-Region Replication (SRR):** Buckets are replicated within the same Region.
+     * **Versioning must be enabled in the bucket in order to use CRR and/or SRR!** 
 
 ### Storage Durability vs. Availability
    * #### Durability
