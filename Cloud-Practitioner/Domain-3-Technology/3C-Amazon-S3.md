@@ -146,23 +146,37 @@
    * #### Data to be Archived:
      * **S3 Glacier Instant Retrieval:**
         * Data archived for a minimum of 90 days.
-        * Can be retrieved in milliseconds (archived data that may need to be accessed instantly).
+        * Can be retrieved in milliseconds (useful for data that needs to be stored, but retrieved quickly when needed).
         * A fee is charged for retrieval. 
      * **S3 Glacier Flexible Retrieval:**
         * Data is archived for a minimum of 90 days.
-        * Can be retrieved in minutes or hours (archived data that may need to be accessed infrequently).
+        * Can be retrieved in 3-5 hours standard, 5-12 hours for bulk data retrieval.
+        * Expedited Retrieval: 1-5 minutes.
         * A fee is charged for retrieval.
      * **S3 Glacier Deep Archive:**
         * Data is archived for a minimum of 180 days.
-        * Can be retrieved in hours (data that is unlikely to be accessed, but needs to be stored for regulatory/compliance reasons).
-        * A fee is charged for retrieval. 
+        * Can be retrieved in 12 hours standard, 48 hours for bulk retreival.
+        * Expedited Rertrieval: Unavailable.
+        * This solution is for data that is unlikely to be accessed, but needs to be stored for regulatory/compliance reasons.
+        * A fee is charged for retrieval.
 
 ### Amazon FSx
    * **Amazon FSx offers fully managed third-party file systems for either Windows File Server (for Windows-based apps) or Lustre (for high performance computing (HPC) workloads).**
    * #### FSx for Windows:
-     * Provides a fully managed Windows file-systems, included high-availability and multi-AZ setups. On-Prem Data Centers can access vis VPN or AWS Direct Connect.
+     * Provides a fully managed Windows file-systems, included high-availability and multi-AZ setups.
+     * On-Prem Data Centers can access vis VPN or AWS Direct Connect.
    * #### FSx Lustre:
      * High performance file system optimized for fast processing of workloads suchs as machine learning, HPC, video processing, financial modeling, and electronic design automation (EDA).
-     * Lustre works natively with Amazon S3. 
+     * Lustre works natively with Amazon S3 - presents S3 objects as files. (Remember: FSx and S3 are **Lustre**!).
+     * On Prem Data Centers can access vis VPN or AWS Direct Connect (common use case: cloud bursting).
+    
+
+
+
+
+
+
+
+
 
 
