@@ -97,7 +97,23 @@
      * **NOTE:** To access S3 privately from an on-prem data center, you would connect to S3 via an **AWS Storage Gateway** using **AWS Direct Connect**.
      * On Prem DC --> AWS Storage Gateway --> AWS Direct Connect (Public or Private Virtual Interface (VIF)) --> Amazon S3
 
+### Storage Durability vs. Availability
+   * #### Durability
+     * Protection against:
+       * Data Loss
+       * Data Corruption
+       * "11 9's" of durability: If you store 10 million objects, then you expect to lose 1 object every 10,000 years!
+       * The "11 9's" of durability is accomplished because AWS stores multiple copies of objects across different AZs.
+   * #### Availability
+     * Measurement of:
+       * Amount of time data is available to you.
+       * Expressed as a percent of time per year (e.g., 99.99%).
 
+### Amazon S3 Storage Classes
+   * **There are a total of seven (7) classes of storage available with S3.**
+   * #### Short-to-Medium time storage:
+      * S3 Standard
+      * S3 Intelligent Tiering 
 
 
 
