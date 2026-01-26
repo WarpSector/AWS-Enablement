@@ -68,6 +68,20 @@
      * **Bursting Throughput:** throughput scales with the amount of storage and can burst to higher performance when needed.
     
 ### Amazon Simple Storage Service (S3)
-
+   * S3 uses **buckets** - an container where you store your objects.
+   * **Objects** are files - S3 stores any type of file.
+   * S3 is designed for 99.999999999% ("11 9's") durability.
+   * S3 can store millions of objects (storage is virtually unlimited), can scale very easily, and is cheap.
+   * **Typical Use Cases:**
+     * Backup and Storage
+     * Application Storage
+     * Media Hosting
+     * Software Delivery
+     * Static Website
+   * S3 uses HTTP/HTTPS protocols over the internet to GET, PUT, POST, DELETE objects and uses RestAPI (so developers can use an Amazon Software Development Kit (SDK) to write code integrating S3 into their applications).
+   * **Keys** are the file names of the objects (so when you see the S3 URL, at the end you'll see the file name of the object - this is called the **key**).
+     * Example URL: https://bucket.s3.aws-region.amazonaws.com/key <-- "key" is the file name of the object 
+   * **Bucket Names** the name of the bucket has to be unique across all of AWS.
+     * Example URL:     
 
 
