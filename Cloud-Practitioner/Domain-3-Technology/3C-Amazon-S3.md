@@ -111,10 +111,34 @@
 
 ### Amazon S3 Storage Classes
    * **There are a total of seven (7) classes of storage available with S3.**
-   * #### Short-to-Medium time storage:
-      * S3 Standard
-      * S3 Intelligent Tiering 
-
+   * #### Data to be Accessed Quickly:
+      * **S3 Standard:**
+        * Automatically stored in S3 standard by default.
+        * Latency is in milliseconds. 
+      * **S3 Intelligent Tiering:**
+        * Data is moved into different storage classes based on how frequently you are accessing that data to try and optimize for cost and performance.
+        * Latency is in milliseconds. 
+      * **S3 Standard Infrequent Access (IA):**
+        * Data that is infrequently accessed for 30 days.
+        * A fee is charged for retrieval.
+        * Latency is in milliseconds.
+      * **S3 One Zone Infrequent Access (IA):**
+        * Data that is infrequently access for 30 days, but is stored **only in one AZ*8 (lowers cost since it's being stored in one AZ versus the usual 3 or more AZs).
+        * A fee is charged for retrieval.
+        * Latency is in milliseconds.
+   * #### Data to be Archived:
+     * **S3 Glacier Instant Retrieval:**
+        * Data archived for a minimum of 90 days.
+        * Can be retrieved in milliseconds (archived data that may need to be accessed instantly).
+        * A fee is charged for retrieval. 
+     * **S3 Glacier Flexible Retrieval:**
+        * Data is archived for a minimum of 90 days.
+        * Can be retrieved in minutes or hours (archived data that may need to be accessed infrequently).
+        * A fee is charged for retrieval.
+     * **S3 Glacier Deep Archive:**
+        * Data is archived for a minimum of 180 days.
+        * Can be retrieved in hours (data that is unlikely to be accessed, but needs to be stored for regulatory/compliance reasons).
+        * A fee is charged for retrieval. 
 
 
 
