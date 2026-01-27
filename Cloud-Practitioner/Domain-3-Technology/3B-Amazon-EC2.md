@@ -74,6 +74,16 @@
      * Adding more instances of the EC2 server and/or application.
      * You are spreading the workload across multiple instances (and balance the load with ELBs).
      * Also called **horizontal** scaling.
+   * #### Auto-Scaling
+     * Amazon EC2 (as well as other compute services such as ECS and EKS) is capable of **auto-scaling** where instances can automatically be launched or terminated in response to demand.
+     * Auto-Scaling is what maintains **high availability** and **scales** capacity.
+     * Integrates with many AWS services including:
+       * CloudWatch for monitoring and scaling (EC2 instances are constantly sending information to CloudWatch such as metrics, CPU utilization, etc.).
+       * Elastic Load Balancing (ELB) for distributing the connections and workload between different instance.
+       * EC2 Spot Instances for cost optimization.
+       * Amazon Virtual Private Cloud (VPC) for deploying instances across AZs.
+   * #### Auto-Scaling Groups (ASGs)
+     *   
 
 ### Amazon Machine Image (AMI)
   * #### Overview
