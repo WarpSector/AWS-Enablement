@@ -25,12 +25,12 @@
    * Minimize Environmental Impact (newest pillar)
   
 **Remember: C.O.R.P.S.S.**
-   * Cost Optimization
-   * Operational Excellence
-   * Reliability
-   * Performance Efficiency
-   * Security
-   * Sustainability
+   * **C**ost Optimization
+   * **O**perational Excellence
+   * **R**eliability
+   * **P**erformance Efficiency
+   * **S**ecurity
+   * **S**ustainability
 
 ```mermaid
 %%{init: {'theme': 'neutral'}}%%
