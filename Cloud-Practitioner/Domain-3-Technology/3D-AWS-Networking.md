@@ -1,5 +1,5 @@
 # Domain 3: Technology
-# (3D: Amazon Web Services Networking Services)
+# (3D: Amazon Web Services Networking)
 
 ## Amazon Route 53
   * ### Amazon Route 53 is the AWS Domain Name Service (DNS).
