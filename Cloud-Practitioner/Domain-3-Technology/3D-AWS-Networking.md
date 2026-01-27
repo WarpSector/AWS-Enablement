@@ -68,12 +68,13 @@
      * When you create an AWS account, a VPC is created for you by default in all AWS Regions.
      * You have full control over who has access to the AWS resources within your VPC.
      * **Subnets** (both public and private) exist inside your VPC, nested inside the AZs. 
-   * #### Classless Inter-Domain Routing (CIDR) Blocks
+   * #### Classless Inter-Domain Routing (CIDR) Blocks and Subnet Masks
      * A **CIDR Block** is the overall IP address range for a VPC.
      * An example CIDR Block for a VPC is: 10.0.0.0/16 (this is the primary block of IP adresses inside your VPC).
      * Each VPC has a router (behind the scenes) that routes traffic inside the VPC to the subnets and AWS resources.
      * **Route tables** are used to route traffic inside the VPC to its destination.
-     * Subnets are then assigned a **subnet mask** - a subset of addresses from the VPC's CIDR Block (example: if the VPC's CIDR Block is 10.0.0.0/16, a subnet inside the VPC will have an address of 10.0.1.0/24. Another subnet will have 10.0.2.0/24. A third 10.0.3.0/24, and so on). 
+     * Subnets are then assigned a **subnet mask** - a subset of addresses from the VPC's CIDR Block (example: if the VPC's CIDR Block is 10.0.0.0/16, a subnet inside the VPC will have an address of 10.0.1.0/24. Another subnet will have 10.0.2.0/24. A third 10.0.3.0/24, and so on).
+     * Subnets will have longer subnet masks than the VPC's CIDR block.
     
 
 
