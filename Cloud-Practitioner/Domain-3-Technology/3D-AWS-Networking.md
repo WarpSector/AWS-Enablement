@@ -27,3 +27,10 @@
     * Health Checking (of your domain name).
     * DNS Failover (automatically changes the domain endpoint if the system fails).
     * Integrates with other Amazon services such as Elastic Load Balancing (ELB), S3, and CloudFront as endpoints.
+  * ### Routing Policies used by Route 53
+    * **Simple:** routes to the IP adress associated with the name.
+    * **Failover:** routes to the secondary address if the primary is down.
+    * **Geolocation:** routes based on geographic location of the request.
+    * **Geoproximity:** routes to closest geographic region.
+    * **Latency:** uses the lowest latency routes to the resource.
+    * **Multivalue Answer:**  returns several IP addresses.
