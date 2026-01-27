@@ -64,6 +64,7 @@
      * VPCs operate at the **Regional** level and you can create up to five (5) VPCs in a Region.
      * VPCs span across all AZs in a Region.
      * VPCs are logically isolated from other VPCs in the AWS Cloud.
+     * VPCs connect to the internet via an **internet gateway (IGW)** or a **virtual private network (VPN) gateway**.
      * A VPC provides complete control over the virtual networking environment including selection of IP addresses, creation of subnets, and configuration of routing tables and gateways.
      * When you create an AWS account, a VPC is created for you by default in all AWS Regions.
      * You have full control over who has access to the AWS resources within your VPC.
@@ -75,6 +76,10 @@
      * **Route tables** are used to route traffic inside the VPC to its destination.
      * Subnets are then assigned a **subnet mask** - a subset of addresses from the VPC's CIDR Block (example: if the VPC's CIDR Block is 10.0.0.0/16, a subnet inside the VPC will have an address of 10.0.1.0/24. Another subnet will have 10.0.2.0/24. A third 10.0.3.0/24, and so on).
      * Subnets will have longer subnet masks than the VPC's CIDR block.
+   * #### Public vs. Private AWS Services
+     * Some AWS services are **public** (like S3, CloudFront, Route 53, DynamoDB) - meaning they sit **outside** any VPCs and exist in the AWS Cloud itself.
+     * Some AWS services are only available **privately** like E2, RDS, etc.
+     * Public AWS resources and services still require permissions and authentication tokens to access - just because they exists outside VPCs does not mean anyone on the internet can access them.  
     
 
 
