@@ -58,3 +58,20 @@
       * Exchanges traffic with appliances using the **GENEVE** protocol (Port 6081).
       * Used in "virtual appliances" such as firewalls and deep packet inspection systems.    
 
+## Virtual Private Cloud (VPC)
+   * #### Overview
+     * A VPC is a virtual network dedicated to your AWS account.
+     * VPCs operate at the **Regional** level and you can create up to five (5) VPCs in a Region.
+     * VPCs span across all AZs in a Region.
+     * VPCs are logically isolated from other VPCs in the AWS Cloud.
+     * A VPC provides complete control over the virtual networking environment including selection of IP addresses, creation of subnets, and configuration of routing tables and gateways.
+     * When you create an AWS account, a VPC is created for you by default in all AWS Regions.
+     * You have full control over who has access to the AWS resources within your VPC.
+   * #### Classless Inter-Domain Routing (CIDR) Blocks
+     * A **CIDR Block** is the overall IP address range for a VPC.
+     *  
+    
+
+
+
+ 
