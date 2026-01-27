@@ -21,8 +21,8 @@
     * **Health Checking:** Route 53 sends automated requests to your application to verify that it's reachable, available, and functional.
     * **You can use any combination of these functions when you use this service.**
   * ### Benefits of Route 53
-    * Domain Registration.
-    * Domain Name Service (getting your own domain name).
+    * Domain Registration (getting your own domain name).
+    * Domain Name Service (translates the domain names to IP addresses using a global DNS network).
     * Traffic Flow (sending users to the best endpoint).
     * Health Checking (of your domain name).
     * DNS Failover (automatically changes the domain endpoint if the system fails).
