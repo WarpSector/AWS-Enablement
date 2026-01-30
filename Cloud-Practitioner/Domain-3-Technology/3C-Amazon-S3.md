@@ -197,12 +197,12 @@
      * A **recovery subnet** is also established where data and applications replicated in the "staging area" are stored in a private subnet where your backups are held and can be tapped back to the primary site during a diaster to minimize downtime.
      * **Conversion:** AWS DRS will automatically convert your on-premises (or Cloud) data into AWS-compatible format so your data can be recovered during a disaster.          
 
-### AWS Snow Services
-   * #### AWS Snowball
-     * Snowball is a service that allows you to move hundreds of terabytes or petabytes of data from your on-prem data center to Amazon S3 (and vice versa) (import/export into/out of S3).
-     * Snowball uses a secure storage device for physical data transportation.
+### AWS Snowball
+   * #### AWS Snowball Edge
+     * Snowball Edge is a service that allows you to move hundreds of terabytes or petabytes of data from your on-prem data center to Amazon S3 (and vice versa) (import/export into/out of S3).
+     * Snowball Edge uses a secure storage device for physical data transportation.
      * **AWS Snowball Client** is software installed on a local computer that identifies, compresses, encrypts, and transfers data into the Cloud.
-     * Snowball is used for bulk data transfer, for edge storage, and for edge compute. 
+     * Snowball Edge is used for bulk data transfer, for edge storage, and for edge compute (use cases for bringing compute services to places where there is no internet).
    * #### AWS Snowmobile
      * A literal shipping container full of storage (up to 100PB) and a truck to transport it.
    * #### AWS Snowcone
