@@ -128,4 +128,33 @@
        * **REMEMBER:** High Availability (HA) = 99.99% uptime, if there's a failure the user will experience a very short "blip" while the service switches over to the next AZ.
        * **REMEMBER:** Fault Tolerance (FT) = 100% uptime, if there's a failure the user will not even know or experience a drop in service because you have an exact, fully operable identical infrastructure running in another AZ (aka: "fault masking").
 
+## AWS Direct Connect (DX)
+  * #### Overview
+    * Amazon Direct Connect is an alternative to connecting on-prem data centers to the AWS Cloud.
+    * DX creates a private, fiber optic connection using the AWS backbone to connect on-prem DCs to the Cloud.
+    * It's an alternative to using Amazon Peer-to-Peer VPN, while encrypted, still uses the public internet and is prone to bandwidth issues (as is the case using the public internet backbone).
+    * DX allows you to connect to all AZs within the Region.
+  * #### Benefits of DX
+    * Reduces cost when moving large volumes of data and traffic
+    * Increases reliability (predictable performance)
+    * Increases bandwidth (predictable bandwidth)
+    * Decreases latency
+
+## AWS Outposts
+  * #### Overview
+    * AWS Outposts is a fully managed service that extends AWS infrastructure, services, APIs, and tools to any on-prem data center.
+    * AWS Outposts are installed co-located hardware racks in the same on-prem data center to provide a truly hybrid Cloud environment.
+    * AWS Outposts extends the VPC into the on-prem data center.
+    * AWS Outposts provides compute, storage, database, and other services that can run locally and allow you to manage your on-prem infrastructure using AWS tools. 
+  * #### Use Cases
+    * Workloads that require low latency with on-prem infrastructure.
+    * Local data processing
+    * Data residency requirements
+    * Migration of applications with local system interdependencies.
  
+## AWS Global Accelerator
+  * #### Overview
+    * Global Accelerator improves the availability and performance of applications for local and global users.
+    * Global Accelerator uses the AWS Global Network to optimize the path for users to applications, which improves the performance of TCP and UDP traffic (such a online gaming).
+    * **Example:** Users accessing applications via TCP/UDP traffic --> Routed to Regional Edge Location --> Global Accelerator uses the AWS Global Network backbone to optimize traffic to Origin Regions.
+    * Global Accelerator accomplishes this by providing static IP addresses that act as **fixed entry points** to application endpoints in a single and/or multiple Regions (connecting to ALBs, NLBs, or EC2 instances). 
