@@ -111,11 +111,18 @@
 
 ## Amazon ElastiCache
   * #### Overview
-    * Fully managed service for open-source DBs Redis and Memchached.
+    * Fully managed service for open-source DBs: **Redis** and **Memcached**.
     * ElastiCache is a key-value pair store.
     * ElastiCache is a high performance, low latency in-memory (RAM) DB store.
   * #### Architecture
     * ElastiCache is put "in front" of the database.
     * It works with EC2 instances, so **not** serverless.
     * The EC2 instance writes to RDS --> ElastiCache is in-between the EC2 instance and RDS --> RDS caches data into ElastiCache --> When a read request comes in from the EC2 instance ("cache hit"), it reads from ElastiCache instead of RDS.  
+
+## Amazon MemoryDB for Redis
+  * #### MemoryDB for Redis vs. ElastiCache
+    * The key thing to remember here is one is **ephemeral** in-line memory (ElastiCache) and the other is **durable** (MemoryDB for Redis).
+    * **Amazon ElastiCache:** Caching. This is for ephemeral data. If the server loses power, the data is gone. ElastiCache is primarily used to speed up RDS (by handling cache hits from the attached EC2 instance).
+    * **Amazon Memory DB for Redis:** Primary Database. This is for durable data. It stores everything in RAM for speed, but it also writes to a distributed transaction log across multiple AZs. 
+
 
