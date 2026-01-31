@@ -7,5 +7,6 @@
   * APIs assist with sharing information and data between computer programs (software).
   * **API Calls:** This is when you perform an action to get different computer programs to "talk to each other" whether pushing a button or typing in a command in the AWS Command Line Interface (CLI).
   * APIs are written in code (namely **Python**) that build the interface and program the set of rules/protocols for computer programs to talk to each other.
+  * **High-Level:** HTTP ports and protocols are "RestAPIs" when computers talk to other computers over the internet.
 
 ## Every action you take in the AWS Cloud is an API call!
