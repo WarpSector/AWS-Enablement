@@ -3,6 +3,9 @@
 
 ## Amazon Elastic Compute Cloud (EC2)
 
+### Executive Summary
+Amazon EC2 provides resizable, virtualized compute capacity in the cloud, allowing users to launch instances with full control over the operating system and software stack. By utilizing Auto Scaling Groups and Elastic Load Balancing, EC2 creates a self-healing, "loosely coupled" architecture that can scale horizontally to meet demand while maintaining fault tolerance.
+
 ### EC2 Overview and Basics
   * #### Compute is the engine of the Cloud.
     * This is where all the compute processing (CPU) of your Cloud applications and web services happen.
