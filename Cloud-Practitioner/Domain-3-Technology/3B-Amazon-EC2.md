@@ -129,6 +129,7 @@ Amazon EC2 provides resizable, virtualized compute capacity in the cloud, allowi
          * Standard Reserve Instances (RIs) provide up to 75% off the On-Demand price. 
          * Users can make upfront payments to reduce their computing costs even further.
          * RIs can be scheduled and launched within a time window you reserve, which allows you to match your reserved capacity to a predictable recurring schedule.
+         * **Convertible Rserved Instances:** These are RIs that allow you to change your AZ, instance size, family, or OS.
       * #### Spot Instances:
          * Good for users who have flexible start and end times, because Spot Instances can be interrupted if other users demand additional capacity.
          * Good for users who have an urgent need for a large amount of additional compute capacity.
