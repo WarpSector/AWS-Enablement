@@ -164,3 +164,18 @@
   * #### Amazon Kinesis Firehose
     * No shards, completely automated and easily scalable.
     * Saves data directly into another service like S3 or Redshift.
+
+## Amazon OpenSearch Serrvice
+  * #### Overview
+    * Fully managed service for searching, visualize, and analyzing text as well as unstructured data (search and analytics suite).
+    * Petabyte scale and secure, deployable to VPC, and integrates with IAM.
+    * Supports SQL syntax queries.
+    * Integrates with open-tools.
+    * Ultrawarm and cold storage available.
+    * Enables encryption at rest and transit.
+  * #### Architecture
+    * Nodes and replicas are deployable across multiple AZs making it HA and scalable.
+    * Not serverless - uses EC2 instances and scales in and out.
+    * Backs up using EBS snapshots.
+    * Deployed as clusters which are managed by APIs, CLI, or via AWS Management Console. 
+
