@@ -14,7 +14,7 @@
 
 ## AWS Control Tower
   * #### Overview
-    * AWS Control Tower simplifies the process of creating multi-account environments.
+    * AWS Control Tower simplifies the process of creating multi-account environments (called **Landing Zones**).
     * AWS Control Tower sets up security, governance, and compliance guardrails for you.
     * Integrates with other AWS services including:
       * AWS Organizations
