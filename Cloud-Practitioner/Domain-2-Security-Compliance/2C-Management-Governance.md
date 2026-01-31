@@ -30,7 +30,7 @@
 
 ## AWS Systems Manager
   * #### Overview
-    * Manages many AWs services such as EC2, S3, RDS, etc.
+    * Manages many AWS services such as EC2, S3, RDS, etc.
     * Components of the AWS System Manager:
       * **Automation:** uses documents to run automations.
       * **Run Command:** allows you to run commands on EC2 instances
@@ -52,7 +52,15 @@
     * Resources can report in their configuration status to AWS Config, which then records information in S3, notifies via SNS, and triggers CloudWatch events/alerts.
     * AWS Config can also leverage Lambda functions to conduct configuration remediation to automatically configure your resources to the desired configuration state.
    
-## 
+## AWS Trusted Advisor
+  * #### Overview
+    * AWS Trusted Advisor is an online resource that helps you:
+      * Reduce cost (advises you on **cost optimization** - one of the 6 pillars of the Well-Architected Framework).
+      * Increase performance (advises you on how to get the best **performance** from your services including guarding against **fault tolerance**).
+      * Improve secruity (advises you on how to optimize the **security** of your services).
+    * AWS Trusted Advisor provides real-time guidance to help you provision your resources following **best practices** (remember the term "best practices" for the exam!).
+   
+    
 
 
  
