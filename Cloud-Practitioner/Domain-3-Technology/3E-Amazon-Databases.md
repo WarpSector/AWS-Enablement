@@ -5,12 +5,16 @@
   * #### Relational Databases
     * Organized by tables and rows.
     * Has a rigid schema (MySQL).
+      * SQL is used to define the structure of the data and its elements.
+      * SQL provides the tools to insert, update, delete, and querying data within the database table.
     * Typically scaled vertically.
     * Supports complex queries and joins.
     * **Examples:** Amazon RDS, MySQL, PostgresSQL, Oracle, IBM DB2.
   * #### Non-Relational Databases
     * Varied data storage models.
-    * Flexible schema (NoSQL) - data is stored in **key-value pairs**, columns, documents, graphs, and has varied or missing attributes.
+    * Flexible schema (NoSQL).
+      * Data is stored in **key-value pairs**, columns, documents, or graphs.
+      * There is no rigid schema so attributes can be missing or have different data types.
     * Scales horizontally.
     * Unstructured, simple language that supports any kind of schema.
     * **Examples:** Amazon DynamoDB, MongoDB, Redis, Neo4j.
