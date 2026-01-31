@@ -102,5 +102,20 @@
     * Redshift always keeps three (3) copies of your data.
     * Redshift provides continous incremental backups.
    
-   
+## Amazon Elastic Map Reduce (EMR)
+  * #### Overview
+    * EMR provides a managed service implementing **Hadoop** - a framework for big data.
+    * EMR is used for **big data** management and intelligence.
+    * EMR can perform **extract, transform, and loading (ETL)** of big data.
+    * EMR can perform ETL from a number of different DBs: RDS, Redshift, DynamoDB, S3, S3 Glacier (**Yes - S3 can also be used as a database to store data!**), Hadoop, Spark, etc. 
+
+## Amazon ElastiCache
+  * #### Overview
+    * Fully managed service for open-source DBs Redis and Memchached.
+    * ElastiCache is a key-value pair store.
+    * ElastiCache is a high performance, low latency in-memory (RAM) DB store.
+  * #### Architecture
+    * ElastiCache is put "in front" of the database.
+    * It works with EC2 instances, so **not** serverless.
+    * The EC2 instance writes to RDS --> ElastiCache is in-between the EC2 instance and RDS --> RDS caches data into ElastiCache --> When a read request comes in from the EC2 instance ("cache hit"), it reads from ElastiCache instead of RDS.  
 
