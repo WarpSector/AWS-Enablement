@@ -13,3 +13,9 @@
    * Example: Users accessing applications via TCP/UDP traffic --> Routed to Regional Edge Location --> Global Accelerator uses the AWS Global Network backbone to optimize traffic to Origin Regions.
    * Global Accelerator accomplishes this by providing static IP addresses (anycast IPs) that act as fixed entry points to application endpoints in a single and/or multiple Regions (connecting to ALBs, NLBs, or EC2 instances).
 
+## AWS CloudFormation
+ * ### Overview
+   * **Infrastructure as Code:** You can code templates for Cloud environments and resources you want (or are updating) via code (Terraform, YAML, or JSON).
+   * Infrastructure is provisioned consistently with fewer errors and with less time and effort than configuring resources manually via the AWS Management Console via *click-ops*.
+   * **Free-to-use:** you are only charged for the resources you've provisioned with your CloudFormation template.
+   *   
