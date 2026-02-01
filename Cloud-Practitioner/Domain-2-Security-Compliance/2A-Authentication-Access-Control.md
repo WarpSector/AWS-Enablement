@@ -1,6 +1,9 @@
 # Domain 2: Security and Compliance
 # (2A: Authentication and Access Control)
 
+## Executive Summary
+IAM is the "gatekeeper" of the cloud, governing **Authentication** (who you are) and **Authorization** (what you can do). By strictly adhering to the **Principle of Least Privilege** and utilizing identity-based components like **Groups** and **Roles**, IAM ensures that users and services have the minimum access necessary, reducing the security risk across the entire AWS account.
+
 ## AWS Identity and Access Management (IAM)
   * ### Overview
     * IAM is an AWS web service that helps you securely control access to AWS resources on your account.
@@ -52,3 +55,36 @@
     * Remove unnecessary credentials.
     * Use policy conditions for extra security.
     * Monitor activity in your AWS account.  
+
+## Summary Tables
+### 🏛️ 1. IAM Core Components
+
+| Component | Purpose | Pro-Tip |
+| :--- | :--- | :--- |
+| **User** | Individual account for humans/apps. | Default = **Zero Permissions**. |
+| **Group** | Collective of users with same job function. | Add Users to Groups; apply Policies to Groups. |
+| **Role** | Temporary identity for services (e.g., EC2). | Use **Roles** instead of Access Keys for apps. |
+| **Policy** | JSON doc defining Allowed/Denied actions. | **Explicit Deny** always overrides Allow. |
+---
+### 🛡️ 2. Credential Types & MFA
+
+| Credential | Use Case | Security Note |
+| :--- | :--- | :--- |
+| **Password** | Logging into the Web Console. | Enforce a strong **Password Policy**. |
+| **Access Keys** | Programmatic access (CLI, SDK, API). | **Access Key ID + Secret Access Key.** |
+| **MFA** | Multi-Factor Authentication. | Combines "What you know" with "What you have." |
+| **Root User** | Account creation and special tasks. | Delete Access Keys; enable MFA; stop using it. |
+---
+### 🛡️3. IAM Best Practices Master Table
+
+| Category | Best Practice | Key Exam Takeaway |
+| :--- | :--- | :--- |
+| **Root** | **Lock away Root.** | Use for initial setup only; Delete Access Keys. |
+| **Identity** | **Individual Users.** | No shared accounts; enables auditing via CloudTrail. |
+| **Access** | **Least Privilege.** | Minimum permissions required = Minimum risk. |
+| **Access** | **Use Groups.** | Apply policies to Groups for scalable management. |
+| **Security** | **Enable MFA.** | Mandatory for Root and highly privileged users. |
+| **Apps** | **IAM Roles.** | Grant permissions to services (EC2/Lambda) via Roles. |
+| **Policies** | **Managed Policies.** | Use reusable, version-controlled policies. |
+
+**Key Mnemonic:** Users have **Passwords**, Services have **Roles**, and Groups have **Users**.
