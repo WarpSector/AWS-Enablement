@@ -27,5 +27,19 @@
   * ### Root Users
     * The **root user** is the user that created the AWS account.
     * Root users have full permissions and cannot be restricted (unless restricted by a Service Control Policy (SCP)).
-    *       
-
+  * ### Multi-Factored Authentication (MFA)
+    * Uses an additional factor in addition to a password to authenticate (typically a random generated numerical code from another device).
+    * MFA uses the **"something you have"** (MFA device + code) and **"something you know"** (your username + password) to authenticate.          
+  * ### Service Control Policies (SCPs)
+    * SCPs are a feature of AWS Organizations.
+    * SCPs are used to define the maximumavailable permissions in an account.
+    * SCPs do not grant permissions - they just define what is allowed in the account.
+  * ### IAM Best Practices
+    * Lock away your AWS account root user access keys.
+    * Create individual IAM users - **DO NOT SHARE USER ACCOUNTS!**
+    * Use **GROUPS** to assign permissions to IAM users.
+    * Add users to a GROUP --> Apply POLICIES to a Group = All users in that GROUP have the same permissions AND it's very easy to manage permissions for that GROUP and associated users.
+    * **Grant least privilege!** (Principal of Least Privilege): Users and Groups have the minimum amount of permissions required to perform their tasks - nothing less, nothing more.
+    * Get started using permissions with AWS managed policies - only use custom policies once you are deeply familiar with the services and permissions available to minimize security risks.
+    * Use customer managed policies instead of inline policies (inline policies are where you assign a policy directly to a user account or a role - it's always safer to separate the policies from the users and have them in one place where you can then assign them to groups or to roles and update them in one place).
+    *   
