@@ -125,6 +125,21 @@
     * Amazon Macie is a fully managed service that uses ML and pattern matching to discover, monitor, and protect sensitive data in your S3 buckets.
     * Amazon Macie can identify a variety of data types including personally identifiable information (PII), protected health information (PHI), API keys, and secret keys.
  
+## Firewalls and Distributed Denial of Service (DDoS) Attacks
+  * ### AWS Web Application Firewall (WAF)
+    * WAF can be placed in front of:
+      * CloudFront
+      * ALBs
+      * Amazon API Gateway
+      * AWS AppSync   
+    * WAFs are layer 7 OSI capable of "reading" IP addresses, HTTP headers and body, and custom URIs.
+    * WAFs block cross-scripting XSS and SQL injection attacks. 
+  * ### AWS Shield
+    * AWS Shield is standard protection that protects you from DDoS attacks where attackers attempt to bring down your service by overwhelming your service with requests.
+    * AWS Shield safeguards web applications running on AWS with **always-on** detection and automatic **in-line** mitigations.
+    * Two tiers:
+      * Standard: standard, no cost
+      * Advanced: $3k/month and 1-year commitment, provides access to a **Shield Response Team (SRT)** giving you 24/7 access to DDoS experts who will help you fight the attack and cost protection, where you will not be charged for any auto-scaling that occurs as a result of the DDoS attack.
 
-
+ 
 
