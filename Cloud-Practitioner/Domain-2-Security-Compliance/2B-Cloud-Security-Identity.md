@@ -41,4 +41,13 @@
     * AD Connector eliminates the need for directory synchronization as well as the cost and complexity of hosting a federation structure.
     * Connects your on-prem to AD to AWS.
 
-
+## Secrets and Encryption
+  * ### Systems Manager Parameter Store
+    * Provides hierarchal storage for data management and secrets management.
+    * Highly scalable, available, and reliable/durable.
+    * You can store passwords, database strings, and license codes as **parameter values**.
+    * You can store parameter values as plain text (unencrypted) or as cipher text (encrypted).
+    * You then reference parameter values by using the unique name that you specified when you created the parameter.
+    * You don't have to store the info in your code, you can store it in a secure, centralized place.
+      * #### Example:
+        * An EC2 instance needs to query RDS --> In order to authenticate and retrieve information from the DB, it makes an API call to the **Parameter Store** --> The Parameter Store holds a DB connection string --> EC2 instance retrieves the string --> EC2 authenticates and is able to query RDS.   
