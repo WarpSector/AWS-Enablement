@@ -102,3 +102,27 @@
   * ### Access Logs
     * **ELB Access Logs:** captures detailed information about requests sent to the load balancer, the IP, request type, etc. to analyze traffic patterns.
     * **S3 Access Logs:** choose a target bucket and provides detailed records for requests made to the bucket (disabled by default).  
+
+## Threat Detection and Response
+  * ### Amazon Inspector (The "Inspector" BEFORE the threat)
+    * Amazon Inspector is an automated vulnerability management service that continually scans your AWS workloads for software vulnerabilities and unintended network exposure.
+    * Amazon Inspector automatically scans all elgible resources once enable and provides a (0-10) risk score.
+    * Amazon Inspector scans whenever changes are made such as installing new software, changing settings, or when a Zero Day vulnerability is discovered globally.
+  * ### Amazon GuardDuty (The "Responder" DURING the threat)
+    * Amazon GuardDuty is an intelligent threat detection service.
+    * Amazon GuardDuty detects account compromise, instance compromise, bucket compromise, and malicious reconnaissance.
+    * Amazon GuardDuty continuously monitors for events across:
+      * AWS CloudTrail Management Events
+      * AWS CloudTrain S3 Data Events
+      * VPC Flow Logs
+      * DNS Logs  
+  * ### Amazon Detective (The "Detective" investigating AFTER the threat)
+    * Amazon Detective analyzes, investigates, and identifies the root cause of the potential security issue and/or breach.
+    * Amazon Detective automatically collects data from AWS resources including VPC Flow Logs, CloudTrail, and GuardDuty.
+    * Amazon Detective uses ML, statistical analysis, and graph theory to determine root cause.
+    * Amazon Detective provides a unified, interactive view of resources, users, and the interactions between them.
+  * ### Amazon Macie
+    *  
+
+
+
