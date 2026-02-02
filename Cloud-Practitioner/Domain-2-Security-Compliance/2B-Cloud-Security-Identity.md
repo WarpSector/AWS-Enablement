@@ -142,10 +142,16 @@
       * Advanced: $3k/month and 1-year commitment, provides access to a **Shield Response Team (SRT)** giving you 24/7 access to DDoS experts who will help you fight the attack and cost protection, where you will not be charged for any auto-scaling that occurs as a result of the DDoS attack.
   * ### Network Firewalls vs. DNS Firewalls
     * #### **AWS Network Firewall**
+      * Managed service for **VPC network protection**.
       * Protects resources in your VPC via a **firewall endpoint**, which is a flexible rules engine providing fine-grained control over network traffic.
       * Always placed in a "firewall" subnet to guard access to your "protected" subnet.
       * Traffic is sent via the firewall endpoint in the firewall subnet, which then routes traffice to the internet gateway (IGW) (in the protected subnet route table, the firewall endpoint is listed as a target VPC endpoint).
       * Usually will have a network load balancer (NLB) in front of it.
-    * #### **AWS DNS Firewall**
-      * 
+      * Includes *stateful* and *stateless* firewalls, intrusion prevention systems (IPS), and web filtering.
+      * Managed via the **AWS Firewall Manager** service or the **AWS Organizations** service (if managing multiple firewall deployments across multiple AWS accounts). 
+    * #### **Amazon Route 53 Resolver DNS Firewall**
+      * Filters and regulates inbound and outbound DNS traffic for VPCs.
+      * Requests route through Route 53 Resolver for DNS, which helps prevent DNS exfiltration of data (prevents sending data to the wrong DNS or endpoint if hijacked by attackers).
+      * Monitors and controls the domains applications an query.
+      * Managed through AWS Firewall Manager or AWS Organizations (if mutliple accounts).
 
