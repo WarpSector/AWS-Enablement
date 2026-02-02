@@ -1,8 +1,41 @@
 # Domain 3: Technology
 # (3D: Amazon Web Services Networking)
 
-### Executive Summary
-AWS Networking provides the isolated virtual environment (VPC) and global routing backbone (Route 53) necessary to securely connect users to cloud resources. It leverages a multi-layered security approach using Security Groups and Network ACLs, while utilizing global acceleration tools to minimize latency for users around the world.
+# High-Level
+### 🏛️ 1. The "Traffic Management" Trio
+
+| Service | Level (OSI) | Analogy | Key "Trigger" Word |
+| :--- | :--- | :--- | :--- |
+| **Route 53** | **Global / DNS** | The Phonebook | **"Domain Registration," "Health Checks," "Global Routing."** |
+| **ELB (ALB)** | **Layer 7 (App)** | The Smart Hostess | **"HTTP/HTTPS," "Path-based routing," "Microservices."** |
+| **ELB (NLB)** | **Layer 4 (Trans)** | The Fast Toll Booth | **"TCP/UDP," "Static IPs," "Ultra-low latency."** |
+| **ELB (GLB)** | **Layer 3 (Net)** | The Customs Agent | **"Firewalls," "3rd-party appliances," "Geneve protocol."** |
+
+---
+
+### 🛡️ 2. The "VPC Security" Layers
+
+| Security Tool | Level | State | Protected Resource | Rule Type |
+| :--- | :--- | :--- | :--- | :--- |
+| **Network ACL** | Subnet | **Stateless** | Subnet boundaries | Allow and **Deny** |
+| **Security Group** | Instance | **Stateful** | EC2 Instances | **Allow only** |
+| **WAF** | Application | Stateful | ALB / CloudFront | Blocks **SQL Injection / XSS** |
+
+---
+
+### 🚀 3. Connectivity & Acceleration
+
+| Solution | Medium | Speed / Performance | Key Benefit |
+| :--- | :--- | :--- | :--- |
+| **Site-to-Site VPN** | Public Internet | **5 Gbps** (2026 Std) | Encrypted, fast setup (minutes). |
+| **Direct Connect** | Private Fiber | **1 Gbps – 400 Gbps** | Dedicated, bypasses internet, consistent. |
+| **Transit Gateway** | Virtual Hub | High (Aggregate) | **Hub-and-spoke** (Simplifies 100+ VPCs). |
+| **Global Accel.** | AWS Backbone | Optimized TCP/UDP | Uses **Static Anycast IPs** for global speed. |
+| **Transfer Accel.** | Edge Locations | S3-Specific | Speeds up **S3 Uploads** from far away. |
+
+---
+
+# Deep Dive
 
 ## Amazon Route 53
   * ### Amazon Route 53 is the AWS Domain Name Service (DNS).
@@ -168,34 +201,4 @@ AWS Networking provides the isolated virtual environment (VPC) and global routin
     * Transfer Accelerator accelerators long-distance data transfers into storage (re: into S3 buckets).
     * Transfer Accelerator is specialized for S3 bucket uploads and downloads leveraging AWS Edge Locations and CloudFront.  
 
-## Summary Tables
-### 🏛️ 1. The "Traffic Management" Trio
 
-| Service | Level (OSI) | Analogy | Key "Trigger" Word |
-| :--- | :--- | :--- | :--- |
-| **Route 53** | **Global / DNS** | The Phonebook | **"Domain Registration," "Health Checks," "Global Routing."** |
-| **ELB (ALB)** | **Layer 7 (App)** | The Smart Hostess | **"HTTP/HTTPS," "Path-based routing," "Microservices."** |
-| **ELB (NLB)** | **Layer 4 (Trans)** | The Fast Toll Booth | **"TCP/UDP," "Static IPs," "Ultra-low latency."** |
-| **ELB (GLB)** | **Layer 3 (Net)** | The Customs Agent | **"Firewalls," "3rd-party appliances," "Geneve protocol."** |
-
----
-
-### 🛡️ 2. The "VPC Security" Layers
-
-| Security Tool | Level | State | Protected Resource | Rule Type |
-| :--- | :--- | :--- | :--- | :--- |
-| **Network ACL** | Subnet | **Stateless** | Subnet boundaries | Allow and **Deny** |
-| **Security Group** | Instance | **Stateful** | EC2 Instances | **Allow only** |
-| **WAF** | Application | Stateful | ALB / CloudFront | Blocks **SQL Injection / XSS** |
-
----
-
-### 🚀 3. Connectivity & Acceleration
-
-| Solution | Medium | Speed / Performance | Key Benefit |
-| :--- | :--- | :--- | :--- |
-| **Site-to-Site VPN** | Public Internet | **5 Gbps** (2026 Std) | Encrypted, fast setup (minutes). |
-| **Direct Connect** | Private Fiber | **1 Gbps – 400 Gbps** | Dedicated, bypasses internet, consistent. |
-| **Transit Gateway** | Virtual Hub | High (Aggregate) | **Hub-and-spoke** (Simplifies 100+ VPCs). |
-| **Global Accel.** | AWS Backbone | Optimized TCP/UDP | Uses **Static Anycast IPs** for global speed. |
-| **Transfer Accel.** | Edge Locations | S3-Specific | Speeds up **S3 Uploads** from far away. |
