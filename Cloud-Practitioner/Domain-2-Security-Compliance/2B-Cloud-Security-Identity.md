@@ -140,6 +140,12 @@
     * Two tiers:
       * Standard: standard, no cost
       * Advanced: $3k/month and 1-year commitment, provides access to a **Shield Response Team (SRT)** giving you 24/7 access to DDoS experts who will help you fight the attack and cost protection, where you will not be charged for any auto-scaling that occurs as a result of the DDoS attack.
-
- 
+  * ### Network Firewalls vs. DNS Firewalls
+    * #### **AWS Network Firewall**
+      * Protects resources in your VPC via a **firewall endpoint**, which is a flexible rules engine providing fine-grained control over network traffic.
+      * Always placed in a "firewall" subnet to guard access to your "protected" subnet.
+      * Traffic is sent via the firewall endpoint in the firewall subnet, which then routes traffice to the internet gateway (IGW) (in the protected subnet route table, the firewall endpoint is listed as a target VPC endpoint).
+      * Usually will have a network load balancer (NLB) in front of it.
+    * #### **AWS DNS Firewall**
+      * 
 
