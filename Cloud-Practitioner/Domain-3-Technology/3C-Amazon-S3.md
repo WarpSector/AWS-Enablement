@@ -234,9 +234,9 @@
      * Snowball Edge uses a secure storage device for physical data transportation.
      * **AWS Snowball Client** is software installed on a local computer that identifies, compresses, encrypts, and transfers data into the Cloud.
      * Snowball Edge is used for bulk data transfer, for edge storage, and for edge compute (use cases for bringing compute services to places where there is no internet).
-   * #### AWS Snowmobile (Sunset in 2024/2025 - likely exam distractor)
+   * #### AWS Snowmobile
      * A literal shipping container full of storage (up to 100PB) and a truck to transport it.
-   * #### AWS Snowcone (Sunset in 2024/2025 - likely an exam distractor)
+   * #### AWS Snowcone
      * The smallest device in the service best suited for outside data centers.  
 
 
