@@ -27,4 +27,11 @@
       * Cognito can be used for Web Identity Federation by either storing the account in **Cognito User Pool** or by retieving IdSp from the user's Amazon, Apple, Google, or Meta account.
       * The **Cognito User Pool** is the service responsible for authenticating the user.
       * From the Cognito User Pool, a JSON Web Token (JWT) is issued, which then goes to the **Cognito Identity Pool**, which then talks to STS to issue the temporary security token for the session --> User can access resources in the VPC.
-                      
+
+## AWS Directory Service
+  * ### Overview
+    * A suite of products with various options for hosting a directory service in the Cloud or connecting to another directory service.
+    *   
+
+
+
