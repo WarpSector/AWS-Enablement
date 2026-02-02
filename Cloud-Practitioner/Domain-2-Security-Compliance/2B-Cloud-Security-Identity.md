@@ -155,6 +155,16 @@
       * Monitors and controls the domains applications an query.
       * Managed through AWS Firewall Manager or AWS Organizations (if mutliple accounts).
 
+## AWS Security Hub
+  * ### Overview
+    * Provides a comprehensive view of security alerts and posture across AWS accounts.
+    * Aggregates, organizes, and prioritizes security alerts and findings from multiple AWS services.
+    * Continuous monitoring of your environment using automated security checks.
+    * Validates against the following security standards:
+      * AWS Foundational Security Best Practices
+      * CIS AWS Foundations Benchmar
+      * PCI DSS  
+
 ## AWS Resource Access Manager (RAM)
   * ### Overview
     * RAM allows you to share specific AWS resources across different AWS accounts within your Organization.
