@@ -1,8 +1,34 @@
 # Domain 3: Technology
 # (3D: Amazon Serverless Services)
 
-## Executive Summary
-The Serverless model represents the peak of cloud efficiency, shifting the focus from "Managing Infrastructure" to "Executing Logic." By removing the burden of server provisioning, patching, and OS management, these services allow you to build highly available, automatically scaling applications where you only pay for the exact resources consumed during execution.
+# High-Level
+### 🏛️ 1. Core Serverless Compute & Data
+| Service | Primary Function | The "Exam Logic" |
+| :--- | :--- | :--- |
+| **AWS Lambda** | Event-driven code execution. | **Millisecond billing**; scales to zero; 15-min limit. |
+| **AWS Fargate** | Serverless container engine. | Run Docker containers **without managing EC2 host servers**. |
+| **Amazon S3** | Serverless object storage. | Infinite scaling; built-in High Availability (HA). |
+| **Amazon DynamoDB**| NoSQL Key-Value database. | Millisecond latency; **On-Demand** or Provisioned scaling. |
+
+---
+
+### 🛡️ 2. Messaging & Decoupling (The "Glue")
+| Service | Pattern | Best Use Case |
+| :--- | :--- | :--- |
+| **Amazon SQS** | **Pull / Queue** | **Decoupling**; prevents back-end flooding/overload. |
+| **Amazon SNS** | **Push / Fan-out** | Sending one message to **many** subscribers (Email/SMS). |
+| **Amazon EventBridge**| **Event Bus** | Routing events from AWS or **3rd-party SaaS** (Shopify/Zendesk). |
+| **Amazon MQ** | **Standard Protocols** | Migrating **RabbitMQ** or **ActiveMQ** without rewriting code. |
+
+---
+
+### 🚀 3. Orchestration & Connectivity
+| Service | Role | Key Feature |
+| :--- | :--- | :--- |
+| **AWS Step Functions** | **Orchestration** | Visual **State Machines**; manages multi-step workflows. |
+| **Amazon API Gateway** | **API Entry Point** | Supports **RESTful** (Request/Response) and **WebSocket** (Real-time). |
+
+# Deep Dive
 
 ## Overview
   * Amazon strongly promotes use of their serverless services such as Lambda, Fargate, DynamoDB.
@@ -60,29 +86,3 @@ The Serverless model represents the peak of cloud efficiency, shifting the focus
   * Fully managed service.
   * Forwards connections to AWS services and on-prem applications (so you can use this in hybrid Cloud architectures).
 
-## Summary Tables
-### 🏛️ 1. Core Serverless Compute & Data
-| Service | Primary Function | The "Exam Logic" |
-| :--- | :--- | :--- |
-| **AWS Lambda** | Event-driven code execution. | **Millisecond billing**; scales to zero; 15-min limit. |
-| **AWS Fargate** | Serverless container engine. | Run Docker containers **without managing EC2 host servers**. |
-| **Amazon S3** | Serverless object storage. | Infinite scaling; built-in High Availability (HA). |
-| **Amazon DynamoDB**| NoSQL Key-Value database. | Millisecond latency; **On-Demand** or Provisioned scaling. |
-
----
-
-### 🛡️ 2. Messaging & Decoupling (The "Glue")
-| Service | Pattern | Best Use Case |
-| :--- | :--- | :--- |
-| **Amazon SQS** | **Pull / Queue** | **Decoupling**; prevents back-end flooding/overload. |
-| **Amazon SNS** | **Push / Fan-out** | Sending one message to **many** subscribers (Email/SMS). |
-| **Amazon EventBridge**| **Event Bus** | Routing events from AWS or **3rd-party SaaS** (Shopify/Zendesk). |
-| **Amazon MQ** | **Standard Protocols** | Migrating **RabbitMQ** or **ActiveMQ** without rewriting code. |
-
----
-
-### 🚀 3. Orchestration & Connectivity
-| Service | Role | Key Feature |
-| :--- | :--- | :--- |
-| **AWS Step Functions** | **Orchestration** | Visual **State Machines**; manages multi-step workflows. |
-| **Amazon API Gateway** | **API Entry Point** | Supports **RESTful** (Request/Response) and **WebSocket** (Real-time). |
