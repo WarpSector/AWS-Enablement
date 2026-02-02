@@ -1,10 +1,36 @@
 # Domain 3: Technology
 # (3C: Amazon Simple Storage Service (S3))
 
-## Amazon Simple Storage Service (S3)
+# High-Level
+### 🏛️ AWS Storage & Data Transfer: Master Comparison Table
 
-### Executive Summary
-Amazon S3 is a highly durable, object-based storage service designed for "11 9's" of durability by replicating data across multiple Availability Zones. It allows for virtually unlimited storage of any file type and features diverse Storage Classes that enable users to optimize costs based on data access patterns and retention requirements.
+| Service | Category | Data Type | Key Mnemonic/Analogy | Primary Use Case |
+| :--- | :--- | :--- | :--- | :--- |
+| **Amazon S3** | Object | Objects (Files) | **"Sand in a bucket"** | Static assets, backups, "11 9's" durability. |
+| **Amazon EBS** | Block | Blocks | **"Local Hard Drive"** | OS volumes for EC2. Replicated within 1 AZ. |
+| **Instance Store** | Block | Blocks | **"Internal SSD"** | Ephemeral, ultra-fast, temporary data. |
+| **Amazon EFS** | File | Files | **"Shared Network Drive"** | Shared Linux files across multiple AZs. |
+| **Amazon FSx** | File | Files | **"Specialized Shared Drive"** | **Lustre** (High Perf) or **Windows** (SMB). |
+| **Storage Gateway** | Hybrid | Mixed | **"The Bridge"** | Connecting on-prem to Cloud storage. |
+| **Snowball Edge** | Transfer/Edge | Objects/EBS | **"Briefcase Data Center"** | Moving TB/PB of data or remote computing. |
+
+---
+
+### 🛡️ S3 Storage Class "Speed-Dial" (For the CCP Exam)
+
+| Storage Class | Use Case | Latency | Durability / AZs |
+| :--- | :--- | :--- | :--- |
+| **Standard** | Frequent Access | Milliseconds | 11 9's / 3+ AZs |
+| **Intelligent-Tiering** | Unknown Access | Milliseconds | 11 9's / 3+ AZs |
+| **Standard-IA** | Infrequent (30+ days) | Milliseconds | 11 9's / 3+ AZs |
+| **One Zone-IA** | Non-critical IA | Milliseconds | **11 9's / 1 AZ only** |
+| **Glacier Instant** | Archived but urgent | Milliseconds | 11 9's / 3+ AZs |
+| **Glacier Flexible** | Normal Archive | 1 min – 12 hrs | 11 9's / 3+ AZs |
+| **Glacier Deep** | Compliance/Legal | 12 – 48 hrs | 11 9's / 3+ AZs |
+
+---
+
+## Amazon Simple Storage Service (S3)
 
 ### Storage Basics
 * **Storage is broken down into three (3) types:**
@@ -211,30 +237,5 @@ Amazon S3 is a highly durable, object-based storage service designed for "11 9's
    * #### AWS Snowcone (Sunset in 2024/2025 - likely an exam distractor)
      * The smallest device in the service best suited for outside data centers.  
 
-## Summary Tables
-### 🏛️ AWS Storage & Data Transfer: Master Comparison Table
 
-| Service | Category | Data Type | Key Mnemonic/Analogy | Primary Use Case |
-| :--- | :--- | :--- | :--- | :--- |
-| **Amazon S3** | Object | Objects (Files) | **"Sand in a bucket"** | Static assets, backups, "11 9's" durability. |
-| **Amazon EBS** | Block | Blocks | **"Local Hard Drive"** | OS volumes for EC2. Replicated within 1 AZ. |
-| **Instance Store** | Block | Blocks | **"Internal SSD"** | Ephemeral, ultra-fast, temporary data. |
-| **Amazon EFS** | File | Files | **"Shared Network Drive"** | Shared Linux files across multiple AZs. |
-| **Amazon FSx** | File | Files | **"Specialized Shared Drive"** | **Lustre** (High Perf) or **Windows** (SMB). |
-| **Storage Gateway** | Hybrid | Mixed | **"The Bridge"** | Connecting on-prem to Cloud storage. |
-| **Snowball Edge** | Transfer/Edge | Objects/EBS | **"Briefcase Data Center"** | Moving TB/PB of data or remote computing. |
-
----
-
-### 🛡️ S3 Storage Class "Speed-Dial" (For the CCP Exam)
-
-| Storage Class | Use Case | Latency | Durability / AZs |
-| :--- | :--- | :--- | :--- |
-| **Standard** | Frequent Access | Milliseconds | 11 9's / 3+ AZs |
-| **Intelligent-Tiering** | Unknown Access | Milliseconds | 11 9's / 3+ AZs |
-| **Standard-IA** | Infrequent (30+ days) | Milliseconds | 11 9's / 3+ AZs |
-| **One Zone-IA** | Non-critical IA | Milliseconds | **11 9's / 1 AZ only** |
-| **Glacier Instant** | Archived but urgent | Milliseconds | 11 9's / 3+ AZs |
-| **Glacier Flexible** | Normal Archive | 1 min – 12 hrs | 11 9's / 3+ AZs |
-| **Glacier Deep** | Compliance/Legal | 12 – 48 hrs | 11 9's / 3+ AZs |
 
