@@ -2,6 +2,34 @@
 # (3H: Migration Services, Artificial Intelligence >> Machine Learning >> Deep Learning, Customer Enablement)
 
 # High-Level
+### 🚀 1. AWS Migration & Data Transfer
+| Service | Focus | Best Use Case |
+| :--- | :--- | :--- |
+| **Migration Hub** | Management | Central dashboard for all migration tools. |
+| **DMS** | Databases | Zero-downtime database moves. |
+| **SMS** | Servers | Migrates servers to EC2. |
+| **DataSync** | Online | Syncing on-prem data to S3/EFS over the web. |
+| **Snowball Edge** | Physical | Moving 80TB+ without using the internet. |
+| **Snowmobile** | Physical | Moving 100PB (Exabyte scale) via truck. |
+
+### 🤖 2. AWS AI/ML/GenAI Service Catalog (Master List)
+| Domain	| Service Name	| Core "Exam Logic" |
+| :--- | :--- | :--- |
+| **Language** |	Amazon Comprehend	| NLP: Finds sentiment, entities, and PII in text. |
+|	**Language** | Amazon Polly	| Text-to-Speech: Creates lifelike voices. |
+| **Language**	| Amazon Transcribe	| Speech-to-Text: Converts audio to text. |
+| **Language** |	Amazon Translate	| Translation: Converts text between languages. |
+| **Vision** |	Amazon Rekognition	| Image/Video: Identifies faces, objects, and unsafe content. |
+| **Vision** |	Amazon Textract	| OCR: Extracts data from tables/forms (not just text). |
+| **Vision** |	Amazon Kendra	| Intelligent Search: Find answers across enterprise data. |
+| **Conversational** |	Amazon Lex	| Chatbots: The engine behind Alexa for your apps. |
+| **Conversational** | Amazon Personalize	| Recommendations: Like "Customers who bought this..." |
+| **Ops & Code** |	Amazon DevOps Guru	| AIOps: Finds "weird" behavior in your system logs. |
+| **Ops & Code** |	Amazon CodeGuru	Dev | Reviews code for quality and security. |
+| **Machine Learning** | Amazon SageMaker | Build, train, deploy custom ML models. |
+| **Generative AI** | Amazon SageMaker Jumpstart | ML hub with FMs, pre-built ML solutions. |
+| **Generative AI** |	Amazon Bedrock	| GenAI API: Access to multiple Foundation Models. |
+| **Generative AI** |	Amazon Q	| AI Assistant: Conversational helper for work/coding. |
 
 
 # Deep Dive
