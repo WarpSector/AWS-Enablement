@@ -12,6 +12,8 @@
 | **Snowball Edge** | Physical | Moving 80TB+ without using the internet. |
 | **Snowmobile** | Physical | Moving 100PB (Exabyte scale) via truck. |
 
+---
+
 ### 🤖 2. AWS AI/ML/GenAI Service Catalog (Master List)
 | Domain	| Service Name	| Core "Exam Logic" |
 | :--- | :--- | :--- |
@@ -31,6 +33,18 @@
 | **Generative AI** |	Amazon Bedrock	| GenAI API: Access to multiple Foundation Models. |
 | **Generative AI** |	Amazon Q	| AI Assistant: Conversational helper for work/coding. |
 
+---
+
+### 💻 AWS Customer Enablement & End-User Services
+| Service | Primary Function | Ideal For... |
+| :--- | :--- | :--- |
+| **WorkSpaces** | Full Virtual Desktop | Full-time employees needing a persistent "Cloud PC." |
+| **AppStream 2.0** | Application Streaming | Students or contractors needing specific "heavy" apps. |
+| **WorkLink** | Mobile Web Access | Accessing internal company wikis/sites on the go. |
+| **WorkDocs** | Document Collaboration | Teams co-authoring and sharing secure files. |
+| **IoT Core** | Device Management | Scaling "smart" hardware (sensors, bulbs, etc.). |
+
+---
 
 # Deep Dive
 
