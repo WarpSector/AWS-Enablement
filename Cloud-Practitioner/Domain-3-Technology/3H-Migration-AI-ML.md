@@ -122,14 +122,45 @@ graph LR
     %%---White Arrow Styling---%%
     linkStyle 0,1 stroke:#fff,stroke-width:3px;
   ``` 
-  * ### Amazon Rekognition
-    *  
-  * ### Amazon Transcribe
-  * ### Amazon Translate
-  * ### Amazon Comprehend
-  * ### Amazon Lex
-  * ### Amazon Polly
-  * ### Amazon SageMaker
-  * ### Amazon Bedrock
-  * ### Amazon DevOps Guru
-  * ### Amazon CodeGuru Security
+## Tier 1: Pre-Built and Ready to Use AI Models
+  * ### Language Services
+    * #### Amazon Comprehend
+      * Natural language processing (NLP) to extract insights from documents.
+    * #### Amazon Polly
+      * Text-to-Speech AI voiceovers.
+    * #### Amazon Transcribe
+      * Speech-to-Text transcription.
+    * #### Amazon Translate
+      * Real-time and batch language translation       
+  * ### Computer Vision & Search
+    * #### Amazon Kendra
+      * Natural language processing from queries to search, finding relevant information
+    * #### Amazon Rekognition
+      * Identifies people and objects from video, image, and objects stored in S3.
+    * #### Amazon Textract
+      * Enhanced optical character recognition (OCR), detects and extracts typed + handwritten text from documents, forms, and tables.
+  * ### Personalized & Conversational
+    * #### Amazon Lex
+      * Adds voice and text conversational interface to applications.
+    * #### Amazon Personalize
+      * Use historical data to build intelligent apps with personalization.             
+  * ### AI Operations
+    * #### Amazon DevOps Guru
+      * "Hands off" service.
+      * Analyzes operational data (logs, metrics) to find suspicious/weird behavior before an outage happens. 
+    * #### Amazon CodeGuru Security 
+      * "Reads" your code like a human reviewer.
+      * Uses ML to find security vulnerabilities and suggests how to fix them.
+
+## Tier 2: Machine Learning Services
+  * ### SageMaker AI
+    * Fully managed service.
+    * Build, train, and deploy your own ML models without worrying about provisioning infrastructure.
+    * **Key Benefits:** Choice of ML tools, fully managed infrastructure, repeatable.
+
+## Tier 3: Machine Learning Frameworks & Infrastructure
+  * ### Total Control
+    * Gives you total control over the model training process.
+    * Use in-house expertise, existing frameworks, and AWS infrastructure. 
+
+
