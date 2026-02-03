@@ -1,5 +1,5 @@
 # Domain 3: Technology
-# (3H: Migration Services, Artificial Intelligence >> Machine Learning >> Deep Learning)
+# (3H: Migration Services, Artificial Intelligence >> Machine Learning >> Deep Learning, Customer Enablement)
 
 # High-Level
 
@@ -186,8 +186,22 @@ graph LR
       * Integrated within a company's information repositories.
       * Useful for business insights or for developers inside an IDE.      
 
-
-
+## Customer Enablement Services
+  * ### AWS Workspaces
+    * Managed **Desktop as a Service (DaaS)** solution allowing you to remote into a streamed desktop.
+    * Available in Windows and Linux.
+  * ### AWS AppStream 2.0
+    * Fully managed non-persistent application streaming service.
+    * Streams apps instead of desktops.
+    * Alternative to Citrix XenApp.
+  * ### AWS WorkLink
+    * One-click access to your internal websites and web appsusing mobile phone browsers.
+    * Does not require VPN client. 
+  * ### AWS WorkDocs
+    * Fully managed & secure content creation, storage, and collaboration service (similar to Google Workspaces).
+    * Create, edit, and share content centrally stored on AWS.
+  * ### AWS IoT Core
+    * Connects IoT devices to the AWS Cloud without the need to provision or manage servers.  
 
 
 
