@@ -174,3 +174,21 @@ graph LR
     * GenAI is powered by large ML models known as **FOUNDATION MODELS (FM)**.
     * FMs can be adapted to perform multiple tasks since they are pre-trained on vast collections of data.
     * Large Language Models (LLMs) are a popular type of FM. 
+  * ### AWS GenAI
+    * #### Amazon SageMaker Jumpstart
+      * ML hub with FMs and pre-built ML solutions.
+    * #### Amazon Bedrock
+      * Full-managed service.
+      * Allows adoption of FMs from Amazon and other 3rd party sources such as OpenAI, Google, Claude, etc. via unified API.
+      * Serverless experience - no provisioning of resources once a model is selected.
+    * #### Amazon Q
+      * Interactive AI-assistant.
+      * Integrated within a company's information repositories.
+      * Useful for business insights or for developers inside an IDE.      
+
+
+
+
+
+
+
