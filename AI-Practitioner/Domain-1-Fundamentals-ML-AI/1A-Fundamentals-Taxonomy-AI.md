@@ -139,7 +139,7 @@ flowchart TD
   * **Unsupervised Learning:** Training data is unlabeled (uncovers hidden patterns in the data)
 ### Implementations
 * **AI:** Uses complex, prebuilt solutions, often via APIs for integration (AI has gone through extensive R&D to be built, allowing it to be integrated)
-* **ML:** Involved dataset selection, model choice (e.g., linear regression), and refinement with error checking
+* **ML:** Involves dataset selection, model choice (e.g., linear regression), and refinement with error checking
 ### Requirements
 * **AI:** Infrastructure varies; high-computing tasks may need **thousands** of machines
 * **ML:** Needs **hundreds of data points** and moderate computational power (single server/small cluster)
