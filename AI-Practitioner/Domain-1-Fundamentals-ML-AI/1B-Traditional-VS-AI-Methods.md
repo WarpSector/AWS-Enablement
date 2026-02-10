@@ -15,7 +15,7 @@
 ## Cost-Optimization Pillar (Well-Architected Framework)
 * Identify if ML is suitable for your specific problem.
 * Not every challenge requires a ML approach when it can be solved with traditional algorithms or simple rule-based systems can achieve the desired outcomes more cost-effectively.
-* Perform a trade-off analysis between custom vs. pre-trained models (pre-trained models are more cost-effective since they've already been trained and required fine tuning).
+* Perform a trade-off analysis between custom vs. pre-trained models (pre-trained models are more cost-effective since they've already been trained and require fine tuning).
 
 ## Framing the ML Problem
 * Best practices to consider before adopting ML solutions.
@@ -43,13 +43,43 @@
 
 ## Specialized Resource Constraints
 ### Human Resources
-  * Data Scientists time is costly and limited for training models.
+  * Data Scientists' time is costly and limited for training models.
   * Model development and time-to-market considerations.
 ### Hardware Choices
   * Cost-effective hardware might limit experimentation speed.
   * Balance between cost and development efficiency.
 
+## Implementation Plan: Start Simple
+### Articulate the Problem
+  * Clearly define objectives and the expected outcomes.
+### Identify Data Sources
+  * Assess data availability and quality.
+### Consider Associated Costs
+  * Data design and preparation expenses.
+  * Storage costs for ML datasets.
 
+## Detailed Cost Considerations
+### Model Training Costs
+  * Dependent on hardware choices:
+    * High-performance hardware may increase costs. 
+### Data Labeling Costs
+  * Necessary for supervised learning models.
+  * Can be significant if large datasets are involved.
+### Potential Hidden Costs
+  * Iterative Re-training Due to Bias:
+    * *Bias* can lead to repeated model adjustments.
+    * Increases time and financial investment.
+  * Hosting and Maintenance:
+    * Ongoing costs for model deployment.
+    * Monitoring and updating models over time.  
 
+## Weighing Costs Against Opportunity
+### Assess Total Investment
+  * Sum of all costs involved in ML adoption (including the hidden costs mentioned above).
+### Opportunity Cost of Not Using ML
+  * Potential benefits missed by not transforming with ML.
 
-
+## Decision Making Criteria
+### Ask: Is ML outperforming existing methods?
+### Availability of Pre-Built Solutions
+  * Access pre-built models and one-click deployments.
