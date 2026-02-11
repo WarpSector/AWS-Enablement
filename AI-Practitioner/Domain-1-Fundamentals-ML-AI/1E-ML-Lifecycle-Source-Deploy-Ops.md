@@ -2,7 +2,30 @@
 # (1E: Machine Learning: Lifecycle, Sourcing Models, Deploying Models, and Operations)
 
 # High-Level Overview
+## Table 1: The 8-Step Machine Learning Lifecycle
+| Step | Phase | Key Activities | AWS Service Spotlight |
+| :--- | :--- | :--- | :--- |
+| **1** | **Identify Goal** | Identify core problem and success criteria. | Business Analysis tools |
+| **2** | **Frame Problem** | Define the ML problem and performance metrics. | **SageMaker Data Wrangler** (EDA) |
+| **3** | **Collect Data** | Gather data from various sources. | **SageMaker Data Wrangler** |
+| **4** | **Pre-Process** | Clean, transform, and format raw data. | **SageMaker Data Wrangler** |
+| **5** | **Engineer Features** | Create and manage relevant variables. | **SageMaker Feature Store** |
+| **6** | **Train & Tune** | Develop, fine-tune, and evaluate the model. | **Amazon SageMaker** |
+| **7** | **Deploy** | Launch for real-time or batch predictions. | **SageMaker Serverless Inference** |
+| **8** | **Monitor** | Track for performance anomalies and bias. | **SageMaker Model Monitor** |
 
+---
+
+## Table 2: AWS Service Quick Reference
+| AWS Service | Lifecycle Stage(s) | Primary Purpose |
+| :--- | :--- | :--- |
+| **SageMaker Data Wrangler** | Framing, Collection, Pre-Processing, Feature Engineering | Exploration, cleaning, and transforming data. |
+| **SageMaker Feature Store** | Feature Engineering | Centralized repository to store and manage features. |
+| **Amazon SageMaker** | Training, Tuning, Evaluation, Deployment | General-purpose model development and hosting. |
+| **SageMaker Model Monitor** | Monitoring | Tracking real-time performance, bias, and anomalies. |
+| **Serverless Inference** | Deployment | Deploying models without managing infrastructure. |
+
+---
 
 # Deep Dive
 
@@ -43,3 +66,54 @@ graph TD
     %% Subgraph Callout Styling
     style Process_Data fill:#e6f7ff,stroke:#1890ff,stroke-width:2px,stroke-dasharray: 5 5,color:#000
 ```
+
+## Step 1: Identify the Business Goal
+  * Identify the *core business problem* and determine the *measureable objectives* and determine *success criteria*.
+
+## Step 2: Frame the ML Problem
+  * Define the *problem to be solved* using ML and identify *key performance metrics*.
+  * **Amazon SageMaker Data Wrangler** is a service that can be used for *exploratory data analysis (visualizing relationships)* to frame the ML problem and determine the data characteristics.
+
+## Step 3: Collect Data
+  * Gather data from various sources to prepare for model training.
+  * **Amazon SageMaker Data Wrangler** can also be used here for integrating and preparing data.
+
+## Step 4: Pre-Process Data
+  * *Cleanse*, *transform*, and *format the data* to make it suitable for training.
+  * **Amazon SageMaker Data Wrangler** once again can help here for data preprocessing (including data cleaning, transformation, and feature selection).
+
+## Step 5: Engineer Features
+  * Create new features to *improve model performance*, selecting and extracting relevant variables.
+  * **Amazon SageMaker Data Wrangler** facilitates the creation of new features.
+  * **Amazon SageMaker Feature Store** provides a centralize repository to create, store, and manage features for use in both model training and real-time inference.
+
+## Step 6: Train, Tune Evaluate
+  * *Develop* and *fine-tune* the model using the training data and evaluate its performance.
+  * **Amazon SageMaker** provides efficient training, tuning, and evaluation with a variety of algorithms.
+
+## Step 7: Deploy
+  * Deploy the model for *real-time* or *batch predictions* in a production environment.
+  * **Amazon SageMaker** provides easy and scalable model deployment.
+
+## Step 8: Monitor
+  * Continuously *track model perfomrance* to maintain effectiveness.
+  * **Amazon SageMaker Model Monitor** provides real-time tracking for anomalies, bias, etc.
+
+## Summary of AWS Services (non-exhaustive list)
+### Amazon SageMaker Data Wrangler:
+  * Data Exploration
+  * Data Pre-Processing (Clean, Transform, Format)
+  * Feature Engineering
+### Amazon SageMaker Feature Store:
+  * Storing and managing features during Feature Engineering step.
+### Amazon SageMaker:
+  * Model Training
+  * Tuning
+  * Evaluation
+  * Deployment
+### Amazon SageMaker Model Monitor:
+  * Continuous performance monitoring and maintenance.
+### Amazon SageMaker Serverless Inference:
+  * Purpose-built inference option that allows:
+    * Deployment of ML models for inference.
+    * Deployment without the need for configuring or managing the underlying infrastructure. 
